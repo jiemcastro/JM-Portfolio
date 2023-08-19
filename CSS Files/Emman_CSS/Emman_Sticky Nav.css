@@ -1,0 +1,133 @@
+:root{
+  --primary:#3DCFD3;
+  --dark:#161616;
+  --pure:#FFFFFF;
+  --ternary:#898989;
+  --light:#F2F2F2;
+  --secondary:#070606;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    background-color: #161616;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+  
+  .logo-nav {
+    cursor: pointer;
+  }
+
+  .logo-nav img{
+    transition: 0.5s all ease-in-out;
+  }
+
+  .logo-nav:hover img{
+    transform: scale(1.1);
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-weight: 200;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+
+  .nav__links li a:hover{
+    color: var(--primary);
+  }
+
+  .cta {
+    padding: 2px 20px;
+    background-color: #3DCFD3;
+    border:2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -o-transition:all .3s ease;
+  }
+
+  .cta-primary{
+    background:var(--primary);
+    color:var(--secondary);
+}
+
+.cta-primary:hover{
+    background:transparent;
+    border-color: var(--primary);
+    color:var(--primary);
+}
+
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+
+.navigation{
+    content: "";
+}	
+
+.navigation ul li{
+	list-style: none;
+	display: inline-block;
+	position: relative;
+}
+
+.navigation ul li a{
+	text-decoration: none;
+	color:var(--pure);
+}
+
+.navigation ul li::after{
+	content: '';
+  height: 3px;    
+  width: 0px;
+  color: var(--pure);
+  background: var(--primary);
+  display: inherit ;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navigation ul li:hover::after{
+	width: 100%;
+}
